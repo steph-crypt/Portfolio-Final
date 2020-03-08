@@ -1,0 +1,87 @@
+body {
+  background-color: #000000;
+  background: linear-gradient(rgba(255, 146, 146, 0.4), rgba(255, 255, 255, 0.4)), url('images/jason-leung1.jpg');
+  color: white;
+  background-size: 1280px;
+  // height: 100vh;
+  // width: 100%;
+}
+
+
+h1 {
+  font-family: 'Montserrat Subrayada', sans-serif;
+  font-size: 95px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  text-decoration: none;
+  padding-top: -100px;
+}
+
+h2 {
+font-family: 'Pacifico', cursive;
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h3 {
+  // font-family: 'Cinzel', serif;
+  font-family: 'Pacifico', cursive;
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+ p {
+  // font-family: 'Pacifico', cursive;
+  // font-family: 'Amiri', serif;
+  // font-family: 'Cinzel', serif;
+  font-family: 'Inconsolata', monospace;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ }
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#about {
+
+
+}
+
+#projects {
+
+}
+
+footer {
+
+}
+
+#linkedin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#github {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
