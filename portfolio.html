@@ -16,8 +16,14 @@
     </div>
   <header>
     <h1>Sofia Stephenson</h1>
-    <h2>FullStack Developer</h2>
-  </header>
+ </header>
+    <section>
+<a href="#" class="scroll-down" address="true"></a>
+</section>
+<section class="ok">
+<p>FullStack Developer</p>
+</section>
+
   <div class="container">
     <div class="text">Do not try and bend the spoon.</div>
   </div>
@@ -50,9 +56,13 @@
 <footer>
 
 <script>
-  // ——————————————————————————————————————————————————
-// TextScramble
-// ——————————————————————————————————————————————————
+
+   $(function() {
+    $('.scroll-down').click (function() {
+      $('html, body').animate({scrollTop: $('section.ok').offset().top }, 'slow');
+      return false;
+    });
+  });
 
 class TextScramble {
   constructor(el) {
