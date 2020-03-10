@@ -8,144 +8,156 @@
   <link href="https://fonts.googleapis.com/css?family=Cinzel|Montserrat+Subrayada|Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="header">
-    <div class="links">
-      "About Me", "#about"
-      "Projects", "#projects"
-      "Contact", "#contact"
-    </div>
-  <header>
-    <h1>Sofia Stephenson</h1>
- </header>
-    <section>
-      <a href="#ok" class="scroll-down" address="true"></a>
-    </section>
-    <section class="ok" id="ok">
-      <p>FullStack Developer</p>
-    </section>
-
-  <div class="container">
-    <div class="text">Do not try and bend the spoon.</div>
+  <div class="links">
+    <a href="#about" style="text-decoration: none">About</a>
+    <a href="#projects" style="text-decoration: none">Projects</a>
+    <a href="#contact" style="text-decoration: none">Contact</a>
   </div>
-<div id="about">
-  <h2>About Me</h2>
-    <p>I am a Fullstack Ruby on Rails web developer with a background in linguistics and writing. Coding engages my practical love of languages and logic with the incredible potency of computational rendering. When I began coding it was as though the veil had been lifted from the mysteriously powerful object that digitization is, and I came to see that all modern technology is compiled of beautifully, masterfully, creatively braided strands of logic, engineered by human genius. Realizing this, I became obsessed with the infinite potential of coding. Coding is human magic.</p>
-</div>
 
-<div id="projects">
-  <h2>Projects</h2>
-    <a class="tastebudd" href="http://www.taste-budd.com/"><img src="images/TasteBudd.png" alt="TasteBudd"></a>
-    <p>Solo Travelers, welcome to TasteBudd! Here you can find the spontaneous buddies of your dreams to hang out and taste a new culture with.</p>
-    <a class="deathbed" href="http://www.Death-Bed.com/"><img src="images/DeathBed.png" alt="DeathBed"></a>
-    <p>DeathBed is a dark comical satire on AirBnB, allowing hosts to lease and guests to rent a grave in Germany for as long as they need.
-    Hosts can rent anything from a formal plot in a cemetary, to a hole in their backyard and guests can leave reviews from the Great Beyond and renew their booking at any time.</p>
-    <a class="socktails" href="https://socktails-cocktails.herokuapp.com/"><img src="images/Socktails.png" alt="Socktails Cocktails"></a>
-    <p>Inspired by Dr. Seuss's Fox in Socks, Socktails Cocktails is a webpage hebstage where you can find, add, create or incubate the recipes of your favorite cocktails and socktails</p>
-    <a class="haunted" href="https://haunted-keyboard.herokuapp.com/"><img src="images/haunted.png" alt="Haunted Keyboard"></a>
-    <p>Spook yourself with eerie sounds from the Haunted Keyboard</p>
-</div>
+    <header>
+    <h1>Sofia Stephenson</h1>
+   </header>
+    <section id="section07" class="demo">
+    <a href="#section07"><span></span></a>
+  </section>
+      <!-- <section>
+        <a href="#ok" class="scroll-down" address="true"></a>
+      </section>
+      <section class="ok" id="ok"> -->
+        <h2>FullStack Developer</h2>
+    <!--   </section> -->
 
-<footer>
-  <h2>Contact Me</h2>
-    <p>Sofia G.S. </p>
-    <p>Berlin, Germany</p>
-    <p>sgandsteph@gmail.com</p>
-  <h3>Follow me</h3>
-    <div id="linkedin"><a href="www.linkedin.com/in/sofiags">LinkedIn</a></div>
-   <div id="github"><a href="https://github.com/steph-crypt">Github</a></div>
-<footer>
+    <div class="container">
+      <div class="text">Do not try and bend the spoon.</div>
+    </div>
+  <div id="about">
+    <h2>About Me</h2>
+      <p>I am a Fullstack Ruby on Rails web developer with a background in linguistics and writing. Coding engages my practical love of languages and logic with the incredible potency of computational rendering. When I began coding it was as though the veil had been lifted from the mysteriously powerful object that digitization is, and I came to see that all modern technology is compiled of beautifully, masterfully, creatively braided strands of logic, engineered by human genius. Realizing this, I became obsessed with the infinite potential of coding. Coding is human magic.</p>
+  </div>
 
-<script>
+  <div id="projects">
+    <h2>Projects</h2>
+      <a class="tastebudd" href="http://www.taste-budd.com/"><img src="images/TasteBudd.png" alt="TasteBudd"></a>
+      <p>Solo Travelers, welcome to TasteBudd! Here you can find the spontaneous buddies of your dreams to hang out and taste a new culture with.</p>
+      <a class="deathbed" href="http://www.Death-Bed.com/"><img src="images/DeathBed.png" alt="DeathBed"></a>
+      <p>DeathBed is a dark comical satire on AirBnB, allowing hosts to lease and guests to rent a grave in Germany for as long as they need.
+      Hosts can rent anything from a formal plot in a cemetary, to a hole in their backyard and guests can leave reviews from the Great Beyond and renew their booking at any time.</p>
+      <a class="socktails" href="https://socktails-cocktails.herokuapp.com/"><img src="images/Socktails.png" alt="Socktails Cocktails"></a>
+      <p>Inspired by Dr. Seuss's Fox in Socks, Socktails Cocktails is a webpage hebstage where you can find, add, create or incubate the recipes of your favorite cocktails and socktails</p>
+      <a class="haunted" href="https://haunted-keyboard.herokuapp.com/"><img src="images/haunted.png" alt="Haunted Keyboard"></a>
+      <p>Spook yourself with eerie sounds from the Haunted Keyboard</p>
+  </div>
 
-   $(function() {
-    $('.scroll-down').click (function() {
-      $('html, body').animate({scrollTop: $('section.ok').offset().top }, 'slow');
-      return false;
+  <footer id="contact">
+    <h2>Contact Me</h2>
+      <p>Sofia G.S. </p>
+      <p>Berlin, Germany</p>
+      <p>sgandsteph@gmail.com</p>
+    <h3>Follow me</h3>
+      <div id="linkedin"><a href="www.linkedin.com/in/sofiags">LinkedIn</a></div>
+     <div id="github"><a href="https://github.com/steph-crypt">Github</a></div>
+  <footer>
+
+  <script>
+    $(function() {
+    $('a[href*=#]').on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 3000, 'linear');
     });
   });
+  </script>
 
-class TextScramble {
-  constructor(el) {
-    this.el = el
-    this.chars = '!<>-_\\/[]{}—=+*^?#________'
-    this.update = this.update.bind(this)
-  }
-  setText(newText) {
-    const oldText = this.el.innerText
-    const length = Math.max(oldText.length, newText.length)
-    const promise = new Promise((resolve) => this.resolve = resolve)
-    this.queue = []
-    for (let i = 0; i < length; i++) {
-      const from = oldText[i] || ''
-      const to = newText[i] || ''
-      const start = Math.floor(Math.random() * 40)
-      const end = start + Math.floor(Math.random() * 40)
-      this.queue.push({ from, to, start, end })
+  <script>
+
+     //$(function() {
+     // $('.scroll-down').click (function() {
+     //   $('html, body').animate({scrollTop: $('section.ok').offset().top },  'slow');
+     //   return false;
+     // });
+   // });
+
+  class TextScramble {
+    constructor(el) {
+      this.el = el
+      this.chars = '!<>-_\\/[]{}—=+*^?#________'
+      this.update = this.update.bind(this)
     }
-    cancelAnimationFrame(this.frameRequest)
-    this.frame = 0
-    this.update()
-    return promise
-  }
-  update() {
-    let output = ''
-    let complete = 0
-    for (let i = 0, n = this.queue.length; i < n; i++) {
-      let { from, to, start, end, char } = this.queue[i]
-      if (this.frame >= end) {
-        complete++
-        output += to
-      } else if (this.frame >= start) {
-        if (!char || Math.random() < 0.28) {
-          char = this.randomChar()
-          this.queue[i].char = char
+    setText(newText) {
+      const oldText = this.el.innerText
+      const length = Math.max(oldText.length, newText.length)
+      const promise = new Promise((resolve) => this.resolve = resolve)
+      this.queue = []
+      for (let i = 0; i < length; i++) {
+        const from = oldText[i] || ''
+        const to = newText[i] || ''
+        const start = Math.floor(Math.random() * 40)
+        const end = start + Math.floor(Math.random() * 40)
+        this.queue.push({ from, to, start, end })
+      }
+      cancelAnimationFrame(this.frameRequest)
+      this.frame = 0
+      this.update()
+      return promise
+    }
+    update() {
+      let output = ''
+      let complete = 0
+      for (let i = 0, n = this.queue.length; i < n; i++) {
+        let { from, to, start, end, char } = this.queue[i]
+        if (this.frame >= end) {
+          complete++
+          output += to
+        } else if (this.frame >= start) {
+          if (!char || Math.random() < 0.28) {
+            char = this.randomChar()
+            this.queue[i].char = char
+          }
+          output += `<span class="dud">${char}</span>`
+        } else {
+          output += from
         }
-        output += `<span class="dud">${char}</span>`
+      }
+      this.el.innerHTML = output
+      if (complete === this.queue.length) {
+        this.resolve()
       } else {
-        output += from
+        this.frameRequest = requestAnimationFrame(this.update)
+        this.frame++
       }
     }
-    this.el.innerHTML = output
-    if (complete === this.queue.length) {
-      this.resolve()
-    } else {
-      this.frameRequest = requestAnimationFrame(this.update)
-      this.frame++
+    randomChar() {
+      return this.chars[Math.floor(Math.random() * this.chars.length)]
     }
   }
-  randomChar() {
-    return this.chars[Math.floor(Math.random() * this.chars.length)]
+
+  // ——————————————————————————————————————————————————
+  // Example
+  // ——————————————————————————————————————————————————
+
+  const phrases = [
+    'Do not try and bend the spoon.',
+    'That’s impossible.',
+    'Instead…',
+    'only try to realize the truth.',
+    'What truth?',
+    'There is no spoon.',
+    'Then you’ll see,',
+    'that it is not the spoon that bends,',
+    'it is only yourself.'
+  ]
+
+  const el = document.querySelector('.text')
+  const fx = new TextScramble(el)
+
+  let counter = 0
+  const next = () => {
+    fx.setText(phrases[counter]).then(() => {
+      setTimeout(next, 3000)
+    })
+    counter = (counter + 1) % phrases.length
   }
-}
 
-// ——————————————————————————————————————————————————
-// Example
-// ——————————————————————————————————————————————————
-
-const phrases = [
-  'Do not try and bend the spoon.',
-  'That’s impossible.',
-  'Instead…',
-  'only try to realize the truth.',
-  'What truth?',
-  'There is no spoon.',
-  'Then you’ll see,',
-  'that it is not the spoon that bends,',
-  'it is only yourself.'
-]
-
-const el = document.querySelector('.text')
-const fx = new TextScramble(el)
-
-let counter = 0
-const next = () => {
-  fx.setText(phrases[counter]).then(() => {
-    setTimeout(next, 3000)
-  })
-  counter = (counter + 1) % phrases.length
-}
-
-next()
-</script>
+  next()
+  </script>
 </body>
 </html>
