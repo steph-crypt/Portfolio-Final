@@ -9,28 +9,27 @@
 </head>
 <body>
   <div class="header">
-  <div class="container-home">
-    <h1>Sofia GS</h1>
     <div class="links">
       "About Me", "#about"
       "Projects", "#projects"
       "Contact", "#contact"
     </div>
+  <header>
+    <h1>Sofia Stephenson</h1>
+ </header>
+    <section>
+      <a href="#ok" class="scroll-down" address="true"></a>
+    </section>
+    <section class="ok" id="ok">
+      <p>FullStack Developer</p>
+    </section>
+
+  <div class="container">
+    <div class="text">Do not try and bend the spoon.</div>
   </div>
-</div>
 <div id="about">
-  <h2>FullStack Developer</h2>
-    <p>Do not try and bend the spoon.</p>
-    <p>That’s impossible. Instead… only try to realize the truth.</p>
-    <p>What truth?</p>
-    <p>There is no spoon.</p>
-    <p>There is no spoon?</p>
-    <p> Then you’ll see, that it is not the spoon that bends, it is only yourself.</p>
   <h2>About Me</h2>
     <p>I am a Fullstack Ruby on Rails web developer with a background in linguistics and writing. Coding engages my practical love of languages and logic with the incredible potency of computational rendering. When I began coding it was as though the veil had been lifted from the mysteriously powerful object that digitization is, and I came to see that all modern technology is compiled of beautifully, masterfully, creatively braided strands of logic, engineered by human genius. Realizing this, I became obsessed with the infinite potential of coding. Coding is human magic.</p>
-
-
-  <h2>Cirriculum Vitae</h2>
 </div>
 
 <div id="projects">
@@ -56,5 +55,97 @@
    <div id="github"><a href="https://github.com/steph-crypt">Github</a></div>
 <footer>
 
+<script>
+
+   $(function() {
+    $('.scroll-down').click (function() {
+      $('html, body').animate({scrollTop: $('section.ok').offset().top }, 'slow');
+      return false;
+    });
+  });
+
+class TextScramble {
+  constructor(el) {
+    this.el = el
+    this.chars = '!<>-_\\/[]{}—=+*^?#________'
+    this.update = this.update.bind(this)
+  }
+  setText(newText) {
+    const oldText = this.el.innerText
+    const length = Math.max(oldText.length, newText.length)
+    const promise = new Promise((resolve) => this.resolve = resolve)
+    this.queue = []
+    for (let i = 0; i < length; i++) {
+      const from = oldText[i] || ''
+      const to = newText[i] || ''
+      const start = Math.floor(Math.random() * 40)
+      const end = start + Math.floor(Math.random() * 40)
+      this.queue.push({ from, to, start, end })
+    }
+    cancelAnimationFrame(this.frameRequest)
+    this.frame = 0
+    this.update()
+    return promise
+  }
+  update() {
+    let output = ''
+    let complete = 0
+    for (let i = 0, n = this.queue.length; i < n; i++) {
+      let { from, to, start, end, char } = this.queue[i]
+      if (this.frame >= end) {
+        complete++
+        output += to
+      } else if (this.frame >= start) {
+        if (!char || Math.random() < 0.28) {
+          char = this.randomChar()
+          this.queue[i].char = char
+        }
+        output += `<span class="dud">${char}</span>`
+      } else {
+        output += from
+      }
+    }
+    this.el.innerHTML = output
+    if (complete === this.queue.length) {
+      this.resolve()
+    } else {
+      this.frameRequest = requestAnimationFrame(this.update)
+      this.frame++
+    }
+  }
+  randomChar() {
+    return this.chars[Math.floor(Math.random() * this.chars.length)]
+  }
+}
+
+// ——————————————————————————————————————————————————
+// Example
+// ——————————————————————————————————————————————————
+
+const phrases = [
+  'Do not try and bend the spoon.',
+  'That’s impossible.',
+  'Instead…',
+  'only try to realize the truth.',
+  'What truth?',
+  'There is no spoon.',
+  'Then you’ll see,',
+  'that it is not the spoon that bends,',
+  'it is only yourself.'
+]
+
+const el = document.querySelector('.text')
+const fx = new TextScramble(el)
+
+let counter = 0
+const next = () => {
+  fx.setText(phrases[counter]).then(() => {
+    setTimeout(next, 3000)
+  })
+  counter = (counter + 1) % phrases.length
+}
+
+next()
+</script>
 </body>
 </html>
